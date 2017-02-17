@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>数字滚动</title>
+    <script src="http://ifaxgj.com:9934/WEALTH/js/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <p class="data"></p>
+</body>
+<script>
+$(function() {
+
+    // m('94');
+scrollData('100');
+    //52    15.35   9456.8255
+
+    function scrollData(strD) {
+        var b,s,f,step,result,p;
+        strD = strD/1;
+        // alert(typeof strD)
+         b = strD>0? strD:(-strD);
+          step = b * 0.5 / 50;
+         f = strD>0? 1:(-1);
+         result = b*0.5+step*f;
+         p = setInterval(function() {
+                    $('.data').html(result+"%");
+            if (result == strD) {
+                clearInterval(p);
+            }
+            result += step*f;
+        }, 100);
+
+    }
+
+
+
+
+
+
+    function m(dataStr) {
+        var k, datanew;
+        if (dataStr.indexOf('.') > 0) {
+            if (dataStr > 100) { // 8965.566
+                k = Math.round(dataStr);
+            } else if (dataStr >= 0) { // 65.566
+                k = dataStr * 100;
+            } else if (dataStr > -100) { // -65.566
+                k = (dataStr.split('-')[1]) * 100;
+            } else { // -8965.566
+                k = Math.round(dataStr.split('-')[1]);
+            }
+            datanew = parseInt(k);
+            k = parseInt(k * 0.98);
+        } else {
+            k = parseInt(dataStr * 0.1);
+        }
+        var p = setInterval(function() {
+            if (dataStr.indexOf('.') > 0) {
+                if (dataStr.indexOf('-') == 0) {
+                    $('.data').html('-' + (k / 100).toFixed(2) + '%');
+                } else {
+                    $('.data').html((k / 100).toFixed(2) + '%');
+                }
+            } else {
+                if (dataStr.indexOf('-') == 0) {
+                    $('.data').html('-' + k);
+                } else {
+                    $('.data').html(k);
+                }
+
+            }
+            if (k == (datanew ? datanew : dataStr)) {
+                clearInterval(p);
+            }
+            k++;
+        }, 10);
+    }
+
+})
+</script>
+
+</html>

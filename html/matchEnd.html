@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="pragram" content="no-cache">
+    <title></title>
+    <script>
+    function getWebRootUrl() {
+        return ((window.location.href + "").match(/^[\w]{2,}:\/\/[\w|\d|\.|\:]{10,}\/[\w|\d}\_]{2,}\//g))[0];
+    }
+    var url = window.location.href + "";
+    if (url.indexOf("http://www.ifaxgj.com/WEALTH_PUB/") == 0 || url.indexOf("http://www.ifaxgj.com/WEALTH_TEST/") == 0) {} else if (url.indexOf("http://www.ifaxgj.com:9934/WEALTH/") == 0 || url.indexOf("http://www.ifaxgj.com:9834/WEALTH/") == 0) {
+        window.location.href = url.replace("http://www.ifaxgj.com:9934/WEALTH/", "http://www.ifaxgj.com/WEALTH_PUB/")
+            .replace("http://www.ifaxgj.com:9834/WEALTH/", "http://www.ifaxgj.com/WEALTH_PUB/");
+    } else {
+        window.location.href = url.replace(getWebRootUrl(), "http://www.ifaxgj.com/WEALTH_TEST/");
+    }
+    var APPEND_PAS = ["window.aow.enableShared"];
+    </script>
+    <link rel="stylesheet" href="http://www.ifaxgj.com:9934/WEALTH/res/root/app/reset.css">
+    <link rel="stylesheet" href="../css/matchEnd.css">
+    <link rel="stylesheet" href="../lib/idangerous.swiper.css">
+    <link rel="stylesheet" href="../lib/animate.min.css">
+    <script src="http://ifaxgj.com:9934/WEALTH/js/jquery-1.11.1.min.js"></script>
+    <script src="../lib/highcharts.min.js"></script>
+    <script src="../lib/charts-more.js"></script>
+    <script src="../lib/solid-gauge.js"></script>
+    <script src="../lib/idangerous.swiper.js"></script>
+    <script src="../lib/swiper.animate1.0.2.min.js"></script>
+    <script src="http://ifaxgj.com:9934/WEALTH/js/plugin.js"></script>
+    <script src="http://ifaxgj.com:9934/WEALTH/js/setjson.js"></script>
+    <script src="http://www.ifaxgj.com:9934/WEALTH/js/wxshare.js"></script>
+    <script>
+    var WX_SHARE_CFG;
+    WX_SHARE_CFG = {
+        category: "service", //使用的服务号或公众号的名称，默认为"service"
+        title: function() {
+            return '我的组合获得' + window['mysitB'] + '%的收益，超越了' + window['mysitA'] + '%的专业理财师。';
+        }, //朋友圈标题
+        msgTitle: function() {
+            return '我的组合获得' + window['mysitB'] + '%的收益，超越了' + window['mysitA'] + '%的专业理财师。';
+        }, //分享给好友，默认值为与title一致
+        imgUrl: "http://www.ifaxgj.com:9934/WEALTH/res/root/app/zMatch/images/dsicon.jpg", //默认为鑫舟logo
+        desc: function() {
+            return window['name'] + '和“基”战2017跨年资产配置争霸赛的故事';
+        },
+    };
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="swiper-content wrap">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                    <p class=" ani img" swiper-animate-effect="fadeIn" swiper-animate-duration="3s" swiper-animate-delay="0.3s">
+                        <img src="../images/mystore.png" />
+                    </p>
+                </div>
+                <div class="swiper-slide slide2">
+                    <div class="innerTop ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                        <div class="circle"></div>
+                        <div class="text">
+                            <p><span></span>个</p>
+                            <p>日日夜夜</p>
+                        </div>
+                    </div>
+                    <div class="innerBottom ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+                        <p class="startDate">2016年11月15日</p>
+                        <p class="letter3">我成功参与了资产配置大赛</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide3">
+                    <div class="innerTop ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                        <div class="circle3"></div>
+                        <div class="circle"></div>
+                        <div class="text">
+                            <p><span class="num"></span><span>%</span></p>
+                            <p>我的总收益</p>
+                        </div>
+                    </div>
+                    <div class="innerBottom ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                        <p class="letter">我战胜了</p>
+                        <p class="letter"><a class="rank">88.00%</a> 的参赛选手</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide4">
+                    <div class="innerTop ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+                        <div class="circle4">
+                            <!-- <div class="pointerBox" style="transform: rotate(300deg); -webkit-transform: rotate(300deg);">
+                                <div class="bar"></div>
+                            </div> -->
+                            <div class="pointerBox">
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                        <div class="classify ">100</div>
+                        <div class="classify ">90</div>
+                        <div class="classify active">一般</div>
+                        <div class="classify">70</div>
+                        <div class="classify">中等</div>
+                        <div class="classify">50</div>
+                        <div class="classify">良好</div>
+                        <div class="classify">30</div>
+                        <div class="classify">优秀</div>
+                        <div class="classify">10</div>
+                        <div class="classify">极好</div>
+                        <div class="text">
+                            <p><span class="num">60</span><span>%</span></p>
+                            <p>我的总排名</p>
+                        </div>
+                    </div>
+                    <div class="innerMiddle ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+                        <div class="ranking">
+                            <!--   -->
+                        </div>
+                    </div>
+                    <div class="innerBottom ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+                        <div class="lineImg">
+                        </div>
+                        <p class="lineP">（我的大赛总排名曲线）</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide5">
+                    <div class="part1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+                        <h6>我的风控</h6>
+                        <div class="rase">
+                            <div class="left">
+                                <p><span class="maxback">4.35</span>%</p>
+                                <p>最大回撤</p>
+                            </div>
+                            <div class="right">
+                                <p> <span class="maxbackrank">42.35</span>%</p>
+                                <p>共战胜选手</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+                        <h6>我的投资风格</h6>
+                        <div class="rase">
+                            <div class="left">
+                                <p><span class="mytrans">4 </span>次</p>
+                                <p>调仓次数</p>
+                            </div>
+                            <div class="right">
+                                <p><span class="avgtrans">10 </span>次</p>
+                                <p>大赛平均调仓次数</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part3 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+                        <div class="chart chartContainer"></div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide6">
+                    <div class="section1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                        <p>我和基战的故事还未结束</p>
+                        <p>......</p>
+                    </div>
+                    <div class="section2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
+                    <div class="section3">
+                        <p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2s">永久运行</p>
+                        <p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="2.5s">支持多组合</p>
+                        <p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="3s">天梯模式</p>
+                        <p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="3.5s">奖励更丰富</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination"></div>
+    </div>
+    <script src="../js/matchEnd.js"></script>
+    <script src="../js/chartContainer.js"></script>
+    <script>
+    var wrap = new Swiper('.swiper-content', {
+        mode: 'vertical',
+        /*    pagination: '.pagination',
+            paginationClickable: true,*/
+        onFirstInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+            // $('.slide2 .text span').html('0');
+            $('.slide3 .text .num').html('0');
+            $('.slide4 .text .num').html('0');
+            // setTimeout(function() {
+            //     scrollData('.slide2 .text span', window['days']);
+            // }, 1500);
+            setTimeout(function() {
+                // scrollData('.slide3 .text .num', (window['rate'] - 10000));
+                flashdate(((window['rate'] - 10000)/100).toFixed(2), function(v) {
+                $('.slide3 .text .num').html(v);
+            });
+            }, 2000);
+            setTimeout(function() {
+                scrollData('.slide4 .text .num', window['mysit']);
+            }, 2000);
+
+        },
+        onSlideChangeEnd: function(swiper) {
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            $('.slide2 .text span').html('0');
+            $('.slide3 .text .num').html('0');
+            $('.slide4 .text .num').html('0');
+            $('.maxback').html('0');
+            $('.maxbackrank').html('0');
+            $('.mytrans').html('0');
+            $('.avgtrans').html('0');
+            /*   $('.pointerBox').css({
+                   transform: 'rotate(-60deg)',
+                   '-webkit-transform': 'rotate(-60deg)'
+               });*/
+            afterFun('.slide2 .text span', window['days'], 1500);
+            // afterFun('.slide3 .text .num', (window['rate'] - 10000), 1000);
+            flashdate(((window['rate'] - 10000)/100).toFixed(2), function(v) {
+                $('.slide3 .text .num').html(v);
+            });
+            afterFun('.slide4 .text .num', window['mysit'], 1000);
+            afterFun('.maxback', window['maxback'], 1000);
+            afterFun('.maxbackrank', window['maxbackrank'], 1000);
+            afterFun('.mytrans', window['mytrans'], 1000);
+            afterFun('.avgtrans', window['avgtrans'], 1000);
+            setTimeout(function() {
+                if ($('.slide5 .part3').width() < 359) {
+                    fontS = 24;
+                } else if ($('.slide5 .part3').width() < 380) {
+                    fontS = 34;
+                } else {
+                    fontS = 40;
+                }
+                chartRate(window['dataRank'], fontS);
+            }, 1000);
+
+
+
+            // 第四页  旋转角度
+            //setTimeout(function() {
+            window["rotateDeg"] = window['mysit'] ? (240 - parseInt(window['mysit'] * 3)) : (-60);
+            $('.pointerBox').css({
+                transition: 'transform 2s linear 4s',
+                transform: 'rotate(' + window["rotateDeg"] + 'deg)',
+                '-webkit-transition': '-webkit-transform 2s linear 4s',
+                '-webkit-transform': 'rotate(' + window["rotateDeg"] + 'deg)'
+            });
+            // }, 1000);
+
+            var H = $('.lineImg').height();
+            if (window['dayranks']) {
+                var dataLine = (window['dayranks'].val).map(function(a) {
+                    return a;
+                });
+                setTimeout(function() {
+                    Historicaltracing(dataLine, H);
+                }, 1000);
+            }
+
+
+
+        }
+    });
+
+    function afterFun(e, dataStr, num) {
+        setTimeout(function() {
+            scrollData(e, dataStr);
+        }, num);
+
+    }
+
+    function scrollData(e, dataStr) {
+        var k, datanew, time;
+        dataStr = dataStr + '';
+        if (dataStr.indexOf('.') > 0) {
+            if (dataStr > 100) { // 8965.566
+                k = Math.round(dataStr);
+            } else if (dataStr >= 0) { // 65.566
+                k = dataStr * 100;
+            } else if (dataStr > -100) { // -65.566
+                k = (dataStr.split('-')[1]) * 100;
+            } else { // -8965.566
+                k = Math.round(dataStr.split('-')[1]);
+            }
+            datanew = parseInt(k);
+            k = parseInt(k * 0.98);
+        } else {
+            k = parseInt(dataStr * 0.1);
+        }
+        time = datanew ? 5 : 10;
+        var p = setInterval(function() {
+            if (dataStr.indexOf('.') > 0) {
+                if (dataStr.indexOf('-') == 0) {
+                    $(e).html('-' + (k / 100).toFixed(2));
+                } else {
+                    $(e).html((k / 100).toFixed(2));
+                }
+            } else {
+                if (dataStr.indexOf('-') == 0) {
+                    $(e).html('-' + k);
+                } else {
+                    $(e).html(k);
+                }
+            }
+
+            if (k == (datanew ? datanew : dataStr)) {
+                clearInterval(p);
+            }
+            k++;
+        }, time);
+    }
+
+
+    function flashdate(val, cb, rat, seconds, freq) {
+        freq = 0.02;
+        seconds = seconds || 0.5;
+        rat = rat || 0.1;
+        var v = +val;
+        var av = v >= 0 ? v : -v;
+        var f = v >= 0 ? 1 : -1;
+        var t = seconds * (1.0 / freq);
+        var pv = av * rat;
+        var sv = av - pv;
+        var ct = 0;
+        var iid = setInterval(function() {
+            if (++ct >= t) {
+                clearInterval(iid);
+                cb(val);
+            } else {
+                sv = sv + pv / t;
+                cb((sv * f).toFixed(2));
+            }
+        }, freq * 1000);
+    }
+
+
+
+
+
+    function _SETUP_TITLE_BAR() {
+
+    }
+    </script>
+</body>
+
+</html>

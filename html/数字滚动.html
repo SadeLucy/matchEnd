@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>数字滚动</title>
+    <script type="text/javascript">
+    var a = [];
+    var s = 0;
+    var b = [];
+
+    function x(num) {
+        for (var i = 0; i < num.length; i++) {
+            var n = num.charAt(i);
+            a.push(n);
+        }
+        m();
+    }
+
+    function m() {
+        var k =0;
+        var span = document.createElement('span');
+        document.body.appendChild(span);
+        var p = window.setInterval(function() {
+            span.innerHTML = k;
+            if (k == a[s]) {
+                window.clearInterval(p);
+                s++;
+                if (a[s]) {
+                    m();
+                }
+            }
+            k++;
+        }, 10)
+    }
+    window.onload = function() {
+        x('8000');
+    }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

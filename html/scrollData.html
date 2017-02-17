@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    function flashdate(val, cb, rat, seconds, freq) {
+        freq = 0.02
+        seconds = seconds || 0.5;
+        rat = rat || 0.1;
+        var v = +val;
+        var av = v >= 0 ? v : -v;
+        var f = v >= 0 ? 1 : -1;
+        var t = seconds * (1.0 / freq);
+        var pv = av * rat;
+        var sv = av - pv;
+        var ct = 0;
+        var iid = setInterval(function() {
+            if (++ct >= t) {
+                clearInterval(iid);
+                cb(val);
+            } else {
+                sv = sv + pv / t;
+                cb((sv * f).toFixed(2));
+            }
+        }, freq * 1000);
+    }
+
+    flashdate(-1.69, function(v) {
+        console.log(v);
+    });
+    </script>
+</body>
+
+</html>
