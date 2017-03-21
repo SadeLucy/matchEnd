@@ -2,8 +2,9 @@ $(function() {
     var fid, fontS;
     // 3ec8e1a14bee49a1bb1b8763945ed356    测服
     // 5c0094f3c2bf4dbf9b424595c616444c   真实
+    // 8cba34263596488d806ac685fa29060
     fid = getQueryString('fid');
-    queryDataSetByTxno({ txno: 6023, fid: fid }, null, null, null, function(jdata) {
+    queryDataSetByTxno({ txno: 6023, fid: '8cba34263596488d806ac685fa29060' }, null, null, null, function(jdata) {
         // console.log(jdata);
         if (jdata.result == '0') {
             addData(jdata);
